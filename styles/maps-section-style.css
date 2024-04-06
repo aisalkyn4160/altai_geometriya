@@ -1,0 +1,47 @@
+.map-section .container{
+    display: flex;
+    align-items: center;
+    gap: 65px;
+}
+.map img{
+    width: 100%;
+}
+.map-txt h2{
+    max-width: 255px;
+}
+.map-txt .contacts{
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+    margin-top: 35px;
+}
+
+.map-txt .contacts li{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.tg-link,
+.wh-link{
+    text-decoration: underline;
+    color: rgba(255, 92, 19, 1) !important;
+}
+
+@media (max-width: 835px){
+    .map-section{
+        padding-bottom: 40px;
+    }
+    .map-section .container{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .map-txt .contacts{
+        gap: 10px;
+    }
+    .map-txt .contacts li{
+        align-items: flex-start;
+    }
+    .map-txt .contacts li svg{
+        width: 14px;
+    }
+}

@@ -1,0 +1,94 @@
+.services{
+    padding: 175px 0 195px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.services .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.services .section-ttl{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.services h2{
+    text-align: center;
+    max-width: 400px;
+}
+.services-cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin: 20px 0;
+}
+.service-card{
+    min-width: 290px;
+    padding: 40px;
+    border: 1px solid rgba(82, 58, 46, 0.2);
+    border-radius: 5px;
+}
+.service-card-icons{
+    width: 65px;
+    height: 65px;
+    position: relative;
+}
+.service-card-icons svg:nth-child(2){
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.service-card:hover{
+    background: rgba(82, 58, 46, 1);
+    color: rgba(252, 252, 252, 1);
+    transition: all 0.5s ease;
+}
+.service-card:hover .service-card-icons svg:nth-child(1) circle{
+    stroke: #FAFAFA;
+    transition: all 0.5s ease;
+}
+
+.service-card:hover .service-card-icons svg:nth-child(2) path{
+    fill: #FAFAFA;
+    transition: all 0.5s ease;
+}
+
+
+@media (max-width: 980px){
+    .services-cards{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+}
+
+@media (max-width: 660px){
+    .services{
+        background-position-x: -325px ;
+        padding-top: 80px;
+    }
+    .services-cards{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .service-card{
+        padding: 20px;
+    }
+    
+}
+
+@media (max-width: 460px){
+    .service-card-icons{
+        width: 49px;
+        height: 49px;
+    }
+    .service-card-icons svg:first-child{
+        width: 49px;
+        height: 49px;
+    }
+    .service-card-icons svg:nth-child(2){
+        width: 20px;
+        height: 20px;
+    }
+}

@@ -1,0 +1,171 @@
+.about-room{
+    display: flex;
+    gap: 40px;
+}
+.about-room-slider{
+    width: 430px;
+}
+.room-slider{
+    width: 100%;
+    padding:  20px 20px 0 ;
+    position: relative;
+}
+.roomSwiper{
+    width: 100%;
+}
+.roomSwiper .swiper-slide{
+    width: 126px;
+    aspect-ratio: 1/1;
+}
+.swiper-button-prev{
+    left: -10px;
+    right: auto;
+}
+.swiper-button-next{
+    right: -10px;
+    left: auto;
+}
+.swiper-button-next:after, .swiper-button-prev:after{
+    font-size: 16px;
+    color: rgba(82, 58, 46, 1);
+    font-weight: 700;
+}
+.roomSwiper2{
+    width: 100%;
+}
+.roomSwiper2 .swiper-slide{
+    width: 100%;
+    aspect-ratio: 1/1;
+}
+.swiper-slide img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 5px;
+}
+
+.about-room-txt{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.about-room-descr h6{
+    margin-top: 0;
+}
+.about-room-descr p{
+    margin-bottom: 10px;
+}
+
+.about-room-include ul{
+    max-width: 505px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.about-room-include ul li{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 13px 11px;
+    border: 1px solid rgba(82, 58, 46, .2);
+    border-radius: 5px;
+    max-width: 270px;
+    min-width: 212px;
+}
+
+.price-list{
+    display: flex;
+    gap: 40px;
+    margin-top: 80px;
+}
+.price-list-txt{
+    width: 49%;
+}
+.price-list-txt h2{
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+.price-list-txt h6{
+    margin-bottom: 20px;
+}
+.price-list-block{
+    width: 100%;
+    display: flex;
+    margin-bottom: 15px;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+.price-list-block p{
+    font-size: 15px;
+    flex-grow: 0;
+    line-height: 1; 
+}
+.price-list-block span{
+    flex-grow: 1;
+    border-bottom: 1px dashed rgba(82, 58, 46, 1);
+    padding-right: 20px;
+}
+.price-list-block .price{
+    opacity: 1;
+    white-space: nowrap;
+}
+.price-list-img{
+    width: 50%;
+
+}
+.price-list-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 5px;
+}
+
+@media (max-width: 1050px){
+    .about-room{
+        flex-direction: column;
+    }
+    .about-room-slider{
+        width: 100%;
+    }
+    .price-list-txt{
+        width: 100%;
+    }
+    .price-list-img{
+        display: none;
+    }
+    
+}
+@media (max-width: 550px){
+    .about-room-include ul{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .about-room-include ul li:nth-child(2){
+        order: 2;
+    }
+    .price-list-block p{
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 460px){
+    .about-room{
+        gap: 20px;
+    }
+    .room-slider{
+        padding-top: 8px;
+    }
+    .price-list{
+        margin-top: 40px;
+    }
+    .price-list-block .type{
+        padding-right: 20px;
+        line-height: 1.4;
+    }
+    .price-list-block span{
+        display: none;
+    }
+}
