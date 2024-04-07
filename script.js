@@ -7,6 +7,12 @@ const whiteHeader = document.querySelector('.white-header');
 burger.addEventListener('click', () => {
   console.log('click');
   header.classList.toggle('mobile-header');
+  if(header.classList.contains('mobile-header')){
+    document.body.classList.add('no-scroll');
+  } else {
+    document.body.classList.remove('no-scroll');
+  }
+
 })
 
 whiteHeader.nextElementSibling.style.paddingTop = whiteHeader.offsetHeight + 'px';
