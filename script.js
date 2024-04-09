@@ -9,6 +9,7 @@ burger.addEventListener('click', () => {
   header.classList.toggle('mobile-header');
   if(header.classList.contains('mobile-header')){
     document.body.classList.add('no-scroll');
+    header.style.overflow = 'auto';
   } else {
     document.body.classList.remove('no-scroll');
   }
@@ -37,6 +38,7 @@ const swiper = new Swiper('.roomSwiper', {
 
 const swiper2 = new Swiper(".roomSwiper2", {
     spaceBetween: 10,
+    effect: "fade",
     thumbs: {
       swiper: swiper,
     },
