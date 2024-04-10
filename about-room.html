@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Алтай Геометрия</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="styles/style.css">
 </head>
@@ -20,8 +21,8 @@
                             <li><a href="./index.html">Главная</a></li>
                             <li><a href="/rooms.html">Номера и цены</a></li>
                             <li><a href="./services-page.html">Услуги</a></li>
-                            <li><a href="">Фотогалерея</a></li>
-                            <li><a href="">Контакты</a></li>
+                            <li><a href="./gallery.html">Фотогалерея</a></li>
+                            <li><a data-fancybox href="#popup-form">Контакты</a></li>
                         </ul>
                     </nav>
                     <div class="contacts">
@@ -127,7 +128,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <a href="#"><button class="btn">Забронировать</button></a>
+                        <a data-fancybox href="#popup-form"><button class="btn">Забронировать</button></a>
                     </div>
                 </div>
                 <div class="price-list">
@@ -165,9 +166,17 @@
                     <div class="price-list-img">
                         <img src="./assets/imgs/price-img.jpg" alt="price-img">
                     </div>
-
                 </div>
             </div>
+            <form style="display: none; max-width: 760px;" id="popup-form">
+                <h3>Забронировать номер</h3>
+                <input type="text" placeholder="ФИО*" required>
+                <input type="email" placeholder="Почта*">
+                <input type="tel" placeholder="Телефона*" required>
+                <textarea placeholder="Комментарий"></textarea>
+                <span>Нажимая на кнопку, вы соглашаетесь <a href="#">на обработку персональных данных</a></span>
+                <button type="submit" class="btn">Оставить заявку</button>
+            </form>
         </div>
         <footer class="footer" style="background-image: url('./assets/imgs/footer-bg.png');">
             <div class="container">
@@ -179,10 +188,10 @@
                         <nav class="nav-menu">
                             <ul>
                                 <li><a href="./index.html">Главная</a></li>
-                                <li><a href="">Номера и цены</a></li>
-                                <li><a href="">Услуги</a></li>
-                                <li><a href="">Фотогалерея</a></li>
-                                <li><a href="">Контакты</a></li>
+                                <li><a href="./rooms.html">Номера и цены</a></li>
+                                <li><a href="./services-page.html">Услуги</a></li>
+                                <li><a href="./gallery.html">Фотогалерея</a></li>
+                                <li><a data-fancybox href="#popup-form">Контакты</a></li>
                         </nav>
                         <ul class="contacts">
                             <li><a href="tel:+796096800020">+7 (960) 968-00-20</a></li>
@@ -214,6 +223,8 @@
             </div>
         </footer>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="/script.js"></script>
 </body>
