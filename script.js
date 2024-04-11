@@ -12,6 +12,7 @@ burger.addEventListener('click', () => {
     header.style.overflow = 'auto';
   } else {
     document.body.classList.remove('no-scroll');
+    header.style.overflow = 'initial';
   }
 
 })
